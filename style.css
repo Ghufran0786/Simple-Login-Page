@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ccc;
+}
+
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.apply_box{
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    box-shadow: 4px 3px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.title_small{
+    font-size: 20px;
+}
+
+.form_container{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.form_control{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-size: 15px;
+    margin-bottom: 1px;
+}
+
+input, select, textarea{
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+
+
+input:focus{
+    outline-color: black;
+}
+
+.button_contianer{
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+}
+
+button{
+    background-color: red;
+    font-size: 22px;
+    border: transparent solid 2px;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 10px;
+    transition: 0.2s ease-in;
+}
+
+button:hover{
+    background-color: #ccc;
+    border: 2px solid red;
+    color: black;
+    transform: scale(1.05);
+    filter: drop-shadow(4px 5px 10px rgba(40, 40, 40, 0.5));
+    transition: 0.2s ease-out;
+    cursor: pointer;
+}
+
+.grid_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 10px;
+  }
+  .city_control {
+    margin-top: 2px; /* Add margin to prevent overlapping */
+    grid-column: 1;
+}
+
+.textarea_control {
+    grid-column: 1 / -1; /* Ensure textarea spans full width */
+}
+
+.textarea_control textarea{
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .grid_container {
+        grid-template-columns: 1fr; /* Stack elements in one column on smaller screens */
+    }
+
+    .city_control,
+    .textarea_control {
+        grid-column: 1; /* Adjust all elements to be full width */
+    }
+}
